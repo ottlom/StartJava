@@ -1,6 +1,5 @@
 package Lesson_1;
 
-
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("Task 1: Создание переменных и вывод их значений на консоль");
@@ -77,11 +76,11 @@ public class VariablesTheme {
         char c = 64;
         char d = 94;
         char e = 95;
-        System.out.println((int)a + " = " + a + "\n" +
+        System.out.println((int) a + " = " + a + "\n" +
                 (int) b + " = " + b + "\n" +
                 (int) c + " = " + c + "\n" +
                 (int) d + " = " + d + "\n" +
-                (int) e + " = " + e + "\n");
+                (int) e + " = " + e);
 
         System.out.println("\nTask 7: Произведение и сумма цифр числа");
         int srcNum = 345;
@@ -121,7 +120,7 @@ public class VariablesTheme {
         srcNum = 86399;
         int hours = srcNum / 3600;
         int minutes = srcNum % 60;
-        int seconds = srcNum % 60;
+        int seconds = minutes % 60;
         System.out.println(hours + ":" + minutes + ":" + seconds);
     }
 }
