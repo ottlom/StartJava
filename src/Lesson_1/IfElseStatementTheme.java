@@ -4,7 +4,7 @@ public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("Task 1: Перевод псевдокода на язык Java");
         int age = 25;
-        boolean MaleGender = true;
+        boolean maleGender = true;
         double height = 1.71;
         String name = "Maks";
         char firstLetterOfName = name.charAt(0);
@@ -15,7 +15,7 @@ public class IfElseStatementTheme {
             System.out.println("В доступе отказано в связи с возврастным ограничением");
         }
 
-        if (!MaleGender) {
+        if (!maleGender) {
             System.out.println("Выбран женский пол для персонажа");
         }
 
@@ -45,20 +45,20 @@ public class IfElseStatementTheme {
         System.out.println("\nTask 3: Работа с числом");
         int srcNum = -7;
 
-        if (srcNum == 0) {
+        if (srcNum != 0) {
+            if (srcNum > 0) {                                      //(srcNum > 0 && srcNum % 2 == 0)
+                System.out.println("число " + srcNum + " положительное");
+            } else {
+                System.out.println("число " + srcNum + " отрицательное");
+            }
+            if (srcNum % 2 == 0) {
+                System.out.println("число " + srcNum + " четное");
+            } else {
+                System.out.println("число " + srcNum + " нечетное");
+            }
+        } else {
             System.out.println("число равно 0");
         }
-        if (srcNum > 0) {                                      //(srcNum > 0 && srcNum % 2 == 0)
-            System.out.println("число " + srcNum + " положительное");
-        } else {
-            System.out.println("число " + srcNum + " отрицательное");
-        }
-        if (srcNum % 2 == 0) {
-            System.out.println("число " + srcNum + " четное");
-        } else {
-            System.out.println("число " + srcNum + " нечетное");
-        }
-
 
         System.out.println("\nTask 4: Поиск одинаковых цифр в числах");
         //take variables num1 and num2 from Task 2
