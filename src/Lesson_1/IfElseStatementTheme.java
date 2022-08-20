@@ -46,7 +46,7 @@ public class IfElseStatementTheme {
         int srcNum = -7;
 
         if (srcNum != 0) {
-            if (srcNum > 0) {                                      //(srcNum > 0 && srcNum % 2 == 0)
+            if (srcNum > 0) {
                 System.out.println("число " + srcNum + " положительное");
             } else {
                 System.out.println("число " + srcNum + " отрицательное");
