@@ -130,7 +130,7 @@ public class CyclesTheme {
             System.out.println("\nTask 7: Отображение ASCII-символов");
             System.out.printf("%s%6s%n", "DEC", "CHAR");
             for (int i = 0; i < 127; i++) {
-                if (i < 48 && i % 2 != 0) {
+                if ((i < 48) && (i % 2 != 0)) {
                     System.out.printf("%3d%6c%n", i, i);
                 } else if ((i > 96 && i < 123) && (i % 2 == 0)) {
                     System.out.printf("%3d%6c%n", i, i);
