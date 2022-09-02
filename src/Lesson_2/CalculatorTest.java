@@ -18,14 +18,11 @@ public class CalculatorTest {
             System.out.print("Введите второе число: ");
             calculator.setNum2(scan.nextInt());
             calculator.calculate();
-            option = scan.nextLine();
-            while (!option.equals("yes") && !option.equals("no")) {
+            scan.nextLine();
+            do {
                 System.out.println("Хотите продолжить вычисления?(yes/no)");
                 option = scan.nextLine();
-                if (option.equals("no")) {
-                    break;
-                }
-            }
+            } while (!option.equals("yes") && !option.equals("no"));
         }
     }
 }
