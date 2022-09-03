@@ -14,7 +14,7 @@ public class JaegerTest {
         jaeger2.setSpeed(2);
         jaeger2.move();
         jaeger2.attack();
-        System.out.println("броня робота " + jaeger1.getMark() + " равна " + jaeger1.getArmor() +
-                " сила робота равна " + jaeger1.getStrength());
+        System.out.println("Характеристики робота " + jaeger1.getMark() + ": сила - " + jaeger1.getStrength() +
+                " скорость - " + jaeger1.getSpeed() + " броня - " + jaeger1.getArmor());
     }
 }
