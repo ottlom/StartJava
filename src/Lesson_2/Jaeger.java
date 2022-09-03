@@ -22,6 +22,15 @@ public class Jaeger {
         }
     }
 
+    public Jaeger() {}
+
+    public Jaeger(String mark, int armor, int strength, int speed) {
+        this.mark = mark;
+        this.armor = armor;
+        this.strength = strength;
+        this.speed = speed;
+    }
+
     public int getArmor() {
         return armor;
     }
@@ -50,24 +59,15 @@ public class Jaeger {
         return speed;
     }
 
-    public  Jaeger() {}
-
-    public Jaeger(String mark, int armor, int strength, int speed) {
-        this.mark = mark;
-        this.armor = armor;
-        this.strength = strength;
-        this.speed = speed;
-    }
-
     public void move() {
-        if (this.speed < 1) {
+        if (speed < 1) {
             System.out.println("робот не может передвигаться");
         }else {
-            System.out.println("робот " + getMark() + " двигается со скоростью " + speed);
+            System.out.println("робот " + mark + " двигается со скоростью " + speed);
         }
     }
 
     public void attack() {
-        System.out.println("робот " + getMark() + " атакует противника");
+        System.out.println("робот " + mark + " атакует противника");
     }
 }

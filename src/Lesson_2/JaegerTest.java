@@ -3,7 +3,7 @@ package Lesson_2;
 public class JaegerTest {
 
     public static void main(String[] args) {
-        Jaeger jaeger1 = new Jaeger("Coyote Tango",4,7,5);
+        Jaeger jaeger1 = new Jaeger("Coyote Tango", 4, 7, 5);
         Jaeger jaeger2 = new Jaeger();
         jaeger2.setMark("Gipsy Danger");
         jaeger2.setArmor(6);
