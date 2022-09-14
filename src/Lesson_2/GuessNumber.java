@@ -1,10 +1,11 @@
 package Lesson_2;
 
+import java.util.Scanner;
+
 public class GuessNumber {
     private int compNum;
     private Player p1;
     private Player p2;
-    private int currentPlayerNum;
 
     public GuessNumber(Player pl1, Player pl2) {
         p1 = pl1;
@@ -12,7 +13,7 @@ public class GuessNumber {
     }
 
     public void setCompNum() {
-        compNum = (int) (1 + (Math.random()) * 100);
+        compNum = (int) (1 + (Math.random()) * 5);
     }
 
     public int getCompNum() {
@@ -27,24 +28,29 @@ public class GuessNumber {
         return p2;
     }
 
-    public void setCurrentPlayerNum(int currentPlayerNum) {
-        this.currentPlayerNum = currentPlayerNum;
-    }
-
-    public int getCurrentPlayerNum() {
-        return currentPlayerNum;
-    }
-
     public void startGame() {
-        if (getCurrentPlayerNum() > getCompNum()) {
-            System.out.println("это число больше числа которое загадал компьютер");
-        } else if (getCurrentPlayerNum() < getCompNum()) {
-            System.out.println("это число меньше числа которое загадал компьютер");
-        } else if (getCurrentPlayerNum() == getCompNum()) {
-            if (getP1().getNumber() == getCurrentPlayerNum()) {
+        Scanner scanNum = new Scanner(System.in);
+        setCompNum();
+        while (true) {
+            System.out.print("игрок " + getP1().getName() + " вводит число = ");
+            getP1().setNum(scanNum.nextInt());
+            if (getP1().getNum() > getCompNum()) {
+                System.out.println("это число больше числа которое загадал компьютер");
+            } else if (getP1().getNum() < getCompNum()) {
+                System.out.println("это число меньше числа которое загадал компьютер");
+            } else {
                 System.out.println("игрок " + getP1().getName() + " победил");
-            } else if (getP2().getNumber() == getCurrentPlayerNum()) {
+                break;
+            }
+            System.out.print("игрок " + getP2().getName() + " вводит число = ");
+            getP2().setNum(scanNum.nextInt());
+            if (getP2().getNum() > getCompNum()) {
+                System.out.println("это число больше числа которое загадал компьютер");
+            } else if (getP2().getNum() < getCompNum()) {
+                System.out.println("это число меньше числа которое загадал компьютер");
+            } else {
                 System.out.println("игрок " + getP2().getName() + " победил");
+                break;
             }
         }
     }
