@@ -14,10 +14,10 @@ public class GuessNumber {
 
     public void start() {
         targetNum = (int) (1 + (Math.random()) * 100);
-        Scanner scanNum = new Scanner(System.in);
+        Scanner console = new Scanner(System.in);
         while (true) {
             System.out.print("игрок " + p1.getName() + " вводит число = ");
-            p1.setNum(scanNum.nextInt());
+            p1.setNum(console.nextInt());
             if (p1.getNum() > targetNum) {
                 System.out.println("это число больше числа которое загадал компьютер");
             } else if (p1.getNum() < targetNum) {
@@ -28,7 +28,7 @@ public class GuessNumber {
             }
 
             System.out.print("игрок " + p2.getName() + " вводит число = ");
-            p2.setNum(scanNum.nextInt());
+            p2.setNum(console.nextInt());
             if (p2.getNum() > targetNum) {
                 System.out.println("это число больше числа которое загадал компьютер");
             } else if (p2.getNum() < targetNum) {
